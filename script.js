@@ -3,37 +3,60 @@
 // Enhanced Interactions & Animations with AI Effects
 // ===========================
 
+// Ensure page is visible immediately (critical for mobile)
+if (document.body) {
+    document.body.style.opacity = '1';
+    document.body.style.visibility = 'visible';
+}
+
+// Global error handler to prevent blank page on errors
+window.addEventListener('error', function(e) {
+    console.error('Error caught:', e.message);
+    // Ensure page remains visible even if there's an error
+    if (document.body) {
+        document.body.style.opacity = '1';
+        document.body.style.visibility = 'visible';
+    }
+});
+
 // ===========================
 // Neural Network Canvas Animation
 // ===========================
 const neuralCanvas = document.getElementById('neuralCanvas');
 if (neuralCanvas) {
-    const ctx = neuralCanvas.getContext('2d');
-    let nodes = [];
-    let animationId;
+    // Check if device is mobile to reduce performance load
+    const isMobile = window.innerWidth <= 768;
     
-    // Set canvas size
-    function resizeCanvas() {
-        neuralCanvas.width = neuralCanvas.offsetWidth;
-        neuralCanvas.height = neuralCanvas.offsetHeight;
-        initNodes();
-    }
-    
-    // Initialize nodes
-    function initNodes() {
-        nodes = [];
-        const nodeCount = Math.floor((neuralCanvas.width * neuralCanvas.height) / 15000);
+    // Skip canvas animation on very small screens (already hidden in CSS)
+    if (window.innerWidth > 480) {
+        const ctx = neuralCanvas.getContext('2d');
+        let nodes = [];
+        let animationId;
         
-        for (let i = 0; i < nodeCount; i++) {
-            nodes.push({
-                x: Math.random() * neuralCanvas.width,
-                y: Math.random() * neuralCanvas.height,
-                vx: (Math.random() - 0.5) * 0.5,
-                vy: (Math.random() - 0.5) * 0.5,
-                radius: Math.random() * 2 + 1
-            });
+        // Set canvas size
+        function resizeCanvas() {
+            neuralCanvas.width = neuralCanvas.offsetWidth;
+            neuralCanvas.height = neuralCanvas.offsetHeight;
+            initNodes();
         }
-    }
+        
+        // Initialize nodes
+        function initNodes() {
+            nodes = [];
+            // Reduce node count on mobile for better performance
+            const divisor = isMobile ? 25000 : 15000;
+            const nodeCount = Math.floor((neuralCanvas.width * neuralCanvas.height) / divisor);
+            
+            for (let i = 0; i < nodeCount; i++) {
+                nodes.push({
+                    x: Math.random() * neuralCanvas.width,
+                    y: Math.random() * neuralCanvas.height,
+                    vx: (Math.random() - 0.5) * 0.5,
+                    vy: (Math.random() - 0.5) * 0.5,
+                    radius: Math.random() * 2 + 1
+                });
+            }
+        }
     
     // Draw neural network
     function drawNeuralNetwork() {
@@ -78,12 +101,13 @@ if (neuralCanvas) {
         animationId = requestAnimationFrame(drawNeuralNetwork);
     }
     
-    // Initialize
-    resizeCanvas();
-    drawNeuralNetwork();
-    
-    // Handle resize
-    window.addEventListener('resize', resizeCanvas);
+        // Initialize
+        resizeCanvas();
+        drawNeuralNetwork();
+        
+        // Handle resize
+        window.addEventListener('resize', resizeCanvas);
+    }
 }
 
 // ===========================
@@ -372,13 +396,6 @@ window.addEventListener('load', () => {
             heroContent.classList.add('visible');
         }, 200);
     }
-    
-    // Initialize page with smooth fade
-    document.body.style.opacity = '0';
-    setTimeout(() => {
-        document.body.style.transition = 'opacity 0.6s ease';
-        document.body.style.opacity = '1';
-    }, 100);
 });
 
 // ===========================
