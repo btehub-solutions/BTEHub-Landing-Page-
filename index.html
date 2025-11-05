@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BTEHub Solutions - Empowering Businesses with Intelligent AI Solutions">
+    <title>BTEHub Solutions | AI Innovation & Product Engineering</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Header / Navbar -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <span class="logo-text">BTE<span class="logo-highlight">Hub</span></span>
+                    </div>
+                    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-links">
+                        <li><a href="#home" class="nav-link active">Home</a></li>
+                        <li><a href="#services" class="nav-link">Services</a></li>
+                        <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                        <li><a href="#pricing" class="nav-link">Pricing</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                        <li>
+                            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                                <i data-lucide="sun" class="sun-icon"></i>
+                                <i data-lucide="moon" class="moon-icon"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section - AI Redesign -->
+    <section class="hero" id="home">
+        <!-- Neural Network Canvas Background -->
+        <canvas id="neuralCanvas" class="neural-canvas"></canvas>
+        
+        <!-- Animated Particles -->
+        <div class="particles-container" id="particlesContainer"></div>
+        
+        <!-- Gradient Mesh Background -->
+        <div class="hero-background">
+            <div class="gradient-mesh"></div>
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content fade-in">
+                <!-- AI Badge with Animation -->
+                <div class="hero-badge ai-badge">
+                    <div class="badge-glow"></div>
+                    <i data-lucide="cpu"></i>
+                    <span>Next-Gen AI Technology</span>
+                    <div class="badge-pulse"></div>
+                </div>
+                
+                <!-- Main Title -->
+                <h1 class="hero-title">
+                    <span class="title-line">Building the Future with</span>
+                    <span class="gradient-text animated-gradient">Artificial Intelligence</span>
+                </h1>
+                
+                <!-- AI-Focused Description -->
+                <p class="hero-description">
+                    Harness the power of <span class="highlight-text">machine learning</span>, 
+                    <span class="highlight-text">neural networks</span>, and 
+                    <span class="highlight-text">deep learning</span> to transform your business. 
+                    We create intelligent systems that think, learn, and evolve.
+                </p>
+                
+                <!-- AI Capabilities Tags -->
+                <div class="ai-tags">
+                    <div class="ai-tag">
+                        <i data-lucide="brain"></i>
+                        <span>Machine Learning</span>
+                    </div>
+                    <div class="ai-tag">
+                        <i data-lucide="network"></i>
+                        <span>Neural Networks</span>
+                    </div>
+                    <div class="ai-tag">
+                        <i data-lucide="bot"></i>
+                        <span>AI Automation</span>
+                    </div>
+                    <div class="ai-tag">
+                        <i data-lucide="sparkles"></i>
+                        <span>Generative AI</span>
+                    </div>
+                </div>
+                
+                <!-- CTA Buttons -->
+                <div class="hero-buttons">
+                    <a href="#services" class="cta-button primary ai-button">
+                        <span class="button-content">
+                            <i data-lucide="rocket"></i>
+                            <span>Start Your AI Journey</span>
+                        </span>
+                        <div class="button-glow"></div>
+                    </a>
+                    <a href="#contact" class="cta-button secondary ai-button">
+                        <span class="button-content">
+                            <i data-lucide="message-square"></i>
+                            <span>Talk to AI Expert</span>
+                        </span>
+                        <div class="button-glow"></div>
+                    </a>
+                </div>
+                
+                <!-- AI Stats with Animation -->
+                <div class="hero-stats ai-stats">
+                    <div class="stat-item-ai">
+                        <div class="stat-icon-ai">
+                            <i data-lucide="activity"></i>
+                            <div class="icon-pulse"></div>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-value" data-target="100">0</div>
+                            <div class="stat-text">AI Models Deployed</div>
+                        </div>
+                    </div>
+                    <div class="stat-item-ai">
+                        <div class="stat-icon-ai">
+                            <i data-lucide="trending-up"></i>
+                            <div class="icon-pulse"></div>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-value" data-target="50">0</div>
+                            <div class="stat-text">Enterprise Clients</div>
+                        </div>
+                    </div>
+                    <div class="stat-item-ai">
+                        <div class="stat-icon-ai">
+                            <i data-lucide="zap"></i>
+                            <div class="icon-pulse"></div>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-value" data-target="99">0</div>
+                            <div class="stat-text">Accuracy Rate</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">Comprehensive AI solutions tailored to your business needs</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop" alt="AI Innovation Lab" class="service-image">
+                    </div>
+                    <h3 class="service-title">AI Innovation Lab</h3>
+                    <p class="service-description">
+                        Explore breakthrough AI technologies and develop custom solutions that push the boundaries of what's possible for your business.
+                    </p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop" alt="AI Product Engineering" class="service-image">
+                    </div>
+                    <h3 class="service-title">AI Product Engineering</h3>
+                    <p class="service-description">
+                        Build scalable, production-ready AI products from concept to deployment with our expert engineering team.
+                    </p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=600&h=400&fit=crop" alt="Chatbot & Automation" class="service-image">
+                    </div>
+                    <h3 class="service-title">Chatbot & Automation</h3>
+                    <p class="service-description">
+                        Streamline operations with intelligent chatbots and automation systems that enhance customer experience and reduce costs.
+                    </p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&h=400&fit=crop" alt="Training & Mentorship" class="service-image">
+                    </div>
+                    <h3 class="service-title">Training & Mentorship</h3>
+                    <p class="service-description">
+                        Empower your team with comprehensive AI training programs and personalized mentorship from industry experts.
+                    </p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=600&h=400&fit=crop" alt="AI Integration" class="service-image">
+                    </div>
+                    <h3 class="service-title">AI Integration</h3>
+                    <p class="service-description">
+                        Seamlessly integrate AI capabilities into your existing systems and workflows to enhance productivity and innovation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-wrapper">
+                <div class="about-content fade-in">
+                    <h2 class="section-title">About BTEHub</h2>
+                    <p class="about-text">
+                        BTEHub Solutions is dedicated to making artificial intelligence practical, accessible, and profitable for creators and businesses. 
+                        We bridge the gap between cutting-edge artificial intelligence and real-world applications, 
+                        delivering solutions that drive measurable results.
+                    </p>
+                    <p class="about-text">
+                        Our mission is to democratize AI technology, enabling organizations of all sizes to harness the power 
+                        of intelligent systems and compete globally in an increasingly digital landscape.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i data-lucide="check-circle"></i>
+                            <span>Cutting-edge AI Technology</span>
+                        </div>
+                        <div class="feature-item">
+                            <i data-lucide="check-circle"></i>
+                            <span>Expert Team of AI Engineers</span>
+                        </div>
+                        <div class="feature-item">
+                            <i data-lucide="check-circle"></i>
+                            <span>Proven Track Record</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual fade-in">
+                    <div class="carousel-container">
+                        <div class="carousel-track">
+                            <div class="carousel-slide">
+                                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop" alt="Team Collaboration" class="carousel-image">
+                                <div class="carousel-caption">
+                                    <div class="stat-number">100+</div>
+                                    <div class="stat-label">Projects Delivered</div>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&h=400&fit=crop" alt="Happy Clients" class="carousel-image">
+                                <div class="carousel-caption">
+                                    <div class="stat-number">50+</div>
+                                    <div class="stat-label">Happy Clients</div>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&h=400&fit=crop" alt="24/7 Support" class="carousel-image">
+                                <div class="carousel-caption">
+                                    <div class="stat-number">24/7</div>
+                                    <div class="stat-label">Support Available</div>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?w=600&h=400&fit=crop" alt="Years Experience" class="carousel-image">
+                                <div class="carousel-caption">
+                                    <div class="stat-number">5+</div>
+                                    <div class="stat-label">Years Experience</div>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop" alt="African Tech Workspace" class="carousel-image">
+                                <div class="carousel-caption">
+                                    <div class="stat-number">Africa</div>
+                                    <div class="stat-label">Innovation Hub</div>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&h=400&fit=crop" alt="African Startup Team" class="carousel-image">
+                                <div class="carousel-caption">
+                                    <div class="stat-number">Local</div>
+                                    <div class="stat-label">Talent & Expertise</div>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&h=400&fit=crop" alt="African Business Meeting" class="carousel-image">
+                                <div class="carousel-caption">
+                                    <div class="stat-number">Global</div>
+                                    <div class="stat-label">African Excellence</div>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=600&h=400&fit=crop" alt="African Coworking Space" class="carousel-image">
+                                <div class="carousel-caption">
+                                    <div class="stat-number">Modern</div>
+                                    <div class="stat-label">Workspace Solutions</div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-btn carousel-prev" aria-label="Previous slide">
+                            <i data-lucide="chevron-left"></i>
+                        </button>
+                        <button class="carousel-btn carousel-next" aria-label="Next slide">
+                            <i data-lucide="chevron-right"></i>
+                        </button>
+                        <div class="carousel-indicators"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section class="clients" id="clients">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Trusted by Businesses</h2>
+                <p class="section-subtitle">Join 50+ companies transforming their business with AI</p>
+            </div>
+            <div class="clients-carousel-wrapper fade-in">
+                <div class="carousel-container clients-carousel">
+                    <div class="carousel-track">
+                        <div class="carousel-slide">
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=500&fit=crop" alt="Naija Tech Hub" class="carousel-image">
+                            <div class="carousel-caption">
+                                <h3 class="client-name">Naija Tech Hub</h3>
+                                <p class="client-description">Leading technology innovation in Nigeria</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=500&fit=crop" alt="Lagos Innovate" class="carousel-image">
+                            <div class="carousel-caption">
+                                <h3 class="client-name">Lagos Innovate</h3>
+                                <p class="client-description">Driving digital transformation across West Africa</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&h=500&fit=crop" alt="Afro Digital Solutions" class="carousel-image">
+                            <div class="carousel-caption">
+                                <h3 class="client-name">Afro Digital Solutions</h3>
+                                <p class="client-description">Empowering African businesses with technology</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=500&fit=crop&sat=-100" alt="Accra AI Labs" class="carousel-image">
+                            <div class="carousel-caption">
+                                <h3 class="client-name">Accra AI Labs</h3>
+                                <p class="client-description">Pioneering AI research and development in Ghana</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=800&h=500&fit=crop" alt="Nairobi Smart Systems" class="carousel-image">
+                            <div class="carousel-caption">
+                                <h3 class="client-name">Nairobi Smart Systems</h3>
+                                <p class="client-description">Smart city solutions for East Africa</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=500&fit=crop&hue=180" alt="Kigali Cloud Ventures" class="carousel-image">
+                            <div class="carousel-caption">
+                                <h3 class="client-name">Kigali Cloud Ventures</h3>
+                                <p class="client-description">Cloud infrastructure for African enterprises</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-btn carousel-prev" aria-label="Previous client">
+                        <i data-lucide="chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn carousel-next" aria-label="Next client">
+                        <i data-lucide="chevron-right"></i>
+                    </button>
+                    <div class="carousel-indicators"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">What Our Clients Say</h2>
+                <p class="section-subtitle">Real stories from businesses we've helped transform</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-rating">
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "BTEHub transformed our customer service with their AI chatbot solution. We've seen a 60% reduction 
+                        in response time and our customer satisfaction scores have never been higher!"
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=faces" alt="Chukwuemeka Okonkwo" class="author-image">
+                        <div class="author-info">
+                            <h4 class="author-name">John Smith</h4>
+                            <p class="author-role">CEO, Naija Tech Hub</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-rating">
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "The AI training program provided by BTEHub was exceptional. Our team now has the skills to implement 
+                        and maintain AI solutions independently. Best investment we've made!"
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=150&h=150&fit=crop&crop=faces" alt="Amara Nwosu" class="author-image">
+                        <div class="author-info">
+                            <h4 class="author-name">Amara Nwosu</h4>
+                            <p class="author-role">CTO, Lagos Innovate</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-rating">
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Working with BTEHub has been a game-changer. Their custom AI product engineering helped us launch 
+                        our platform 3 months ahead of schedule. Highly recommended!"
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=faces" alt="Kwame Mensah" class="author-image">
+                        <div class="author-info">
+                            <h4 class="author-name">Kwame Mensah</h4>
+                            <p class="author-role">Founder, Afro Digital Solutions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Flexible Pricing Plans</h2>
+                <p class="section-subtitle">Choose the perfect plan for your business needs</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card fade-in">
+                    <div class="pricing-badge">Starter</div>
+                    <div class="pricing-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=300&fit=crop" alt="AI Consultation" class="pricing-image">
+                    </div>
+                    <h3 class="pricing-title">AI Consultation</h3>
+                    <div class="pricing-price">
+                        <span class="currency">₦</span>
+                        <span class="amount">350,000</span>
+                        <span class="period">/session</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i data-lucide="check"></i><span>2-hour consultation session</span></li>
+                        <li><i data-lucide="check"></i><span>AI strategy roadmap</span></li>
+                        <li><i data-lucide="check"></i><span>Technology recommendations</span></li>
+                        <li><i data-lucide="check"></i><span>Implementation guidance</span></li>
+                        <li><i data-lucide="check"></i><span>Follow-up support (1 week)</span></li>
+                    </ul>
+                    <a href="#contact" class="pricing-button">Get Started</a>
+                </div>
+                <div class="pricing-card featured fade-in">
+                    <div class="pricing-badge popular">Most Popular</div>
+                    <div class="pricing-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=300&fit=crop" alt="Custom AI Solution" class="pricing-image">
+                    </div>
+                    <h3 class="pricing-title">Custom AI Solution</h3>
+                    <div class="pricing-price">
+                        <span class="currency">₦</span>
+                        <span class="amount">500,000</span>
+                        <span class="period">/project</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i data-lucide="check"></i><span>Full AI solution development</span></li>
+                        <li><i data-lucide="check"></i><span>Custom model training</span></li>
+                        <li><i data-lucide="check"></i><span>Integration with existing systems</span></li>
+                        <li><i data-lucide="check"></i><span>3 months support & maintenance</span></li>
+                        <li><i data-lucide="check"></i><span>Team training included</span></li>
+                        <li><i data-lucide="check"></i><span>Performance optimization</span></li>
+                    </ul>
+                    <a href="#contact" class="pricing-button primary">Get Started</a>
+                </div>
+                <div class="pricing-card fade-in">
+                    <div class="pricing-badge">Enterprise</div>
+                    <div class="pricing-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&h=300&fit=crop" alt="AI Partnership" class="pricing-image">
+                    </div>
+                    <h3 class="pricing-title">AI Partnership</h3>
+                    <div class="pricing-price">
+                        <span class="amount">Custom</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i data-lucide="check"></i><span>Dedicated AI team</span></li>
+                        <li><i data-lucide="check"></i><span>Multiple AI projects</span></li>
+                        <li><i data-lucide="check"></i><span>Priority support 24/7</span></li>
+                        <li><i data-lucide="check"></i><span>Ongoing optimization</span></li>
+                        <li><i data-lucide="check"></i><span>Advanced analytics & reporting</span></li>
+                        <li><i data-lucide="check"></i><span>Strategic AI consulting</span></li>
+                    </ul>
+                    <a href="#contact" class="pricing-button">Contact Sales</a>
+                </div>
+            </div>
+            <div class="pricing-note fade-in">
+                <i data-lucide="info"></i>
+                <p>All plans include initial consultation and project scoping. Custom packages available for unique requirements.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content fade-in">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="contact-intro">
+                    Ready to transform your business with AI? Let's start a conversation about your needs and goals.
+                </p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i data-lucide="mail"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>btehubsolutions@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i data-lucide="phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p>07045422815</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i data-lucide="globe"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Website</h4>
+                            <p><a href="https://btehubsolutions.vercel.app" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">btehubsolutions.vercel.app</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">© 2025 BTEHub Solutions — Innovating Intelligence</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1YwxtU9UPy/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+                        <i data-lucide="facebook"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ben-sam-oladoyin-527966233?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                        <i data-lucide="linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/bensamoladoyin?igsh=MTB3M281MnJ3bjdxbA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                        <i data-lucide="instagram"></i>
+                    </a>
+                    <a href="https://x.com/bensam_ola42584?s=21" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="X (Twitter)">
+                        <i data-lucide="twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
